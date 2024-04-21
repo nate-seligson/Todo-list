@@ -6,18 +6,13 @@ export class Task{
         this.object.innerHTML = title
         this.object.style.backgroundColor = color
         this.object.className = "task"
-        document.body.appendChild(this.object)
-
-        this.checkbox = document.createElement("input")
-        this.checkbox.type = "checkbox"
-        this.checkbox.className = "cbox"
-        this.checkbox.addEventListener("click", () => this.StrikeThrough())
-        this.object.appendChild(this.checkbox)
+        document.getElementById("tasks").appendChild(this.object)
 
         this.line = document.createElement("div");
         this.line.style.width = this.object.style.width
         this.line.className = "line"
         this.object.appendChild(this.line)
+        this.object.addEventListener("click", this.StrikeThrough.bind(this))
     }
     StrikeThrough(){
         if(!this.checked){

@@ -1,3 +1,5 @@
 import { Task } from "./tasks.js";
-new Task("hi", "red")
-new Task("BYE", "blue")
+function CreateTask(input = "", color = "red"){
+    new Task(input, color)
+}
+document.getElementById("newtask").addEventListener("click", function(){CreateTask(document.getElementById("inputtask").value, document.getElementById("colorinput").value); document.getElementById("inputtask").value = ""})

@@ -1,26 +1,13 @@
 <body>
 <script type = "module" src = "main.js"></script>
-<style>
-    .task{
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 3vw;
-        margin: 10vw;
-        margin-top: 0vw;
-        margin-bottom:3vw;
-        padding: 3vw;
-        border-radius: 10vw;
-        position:relative
-    }
-    .cbox{
-        float:right;
-        width:3vw;
-        height:3vw;
-    }
-    .line{
-        position:relative;
-        top:-1.75vw;
-        border-bottom: 0.5vw solid black;
-        display:none;
-    }
-</style>
+<link rel = "stylesheet", href = "main.css">
+<div id = "tasks"></div>
+<div id = "stuff" style = "position:relative">
+    <input type = "color", id = "colorinput", value = "#ff0000"></input>
+    <div id = "newtask">
+        <div class = "plus" style = "margin:20% auto; width:0vw; height:2vw;"></div>
+        <div class = "plus" style = "margin:-57% auto;width:2vw; height:0vw;"></div>
+    </div>
+    <input id = "inputtask"></input>
+</div>
 </body>
