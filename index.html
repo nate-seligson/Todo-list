@@ -5,9 +5,13 @@
 <div id = "stuff" style = "position:relative">
     <input type = "color", id = "colorinput", value = "#ff0000"></input>
     <div id = "newtask">
-        <div class = "plus" style = "margin:20% auto; width:0vw; height:2vw;"></div>
-        <div class = "plus" style = "margin:-57% auto;width:2vw; height:0vw;"></div>
+        <div class = "plus" style = "width:0%; height:50%;"></div>
+        <div class = "plus" style = "width:50%; height:0%;"></div>
     </div>
     <input id = "inputtask"></input>
 </div>
+<br>
+<center>
+<button id = "clear", onclick = "localStorage.clear(); location.reload();">Clear</button>
+</center>
 </body>
