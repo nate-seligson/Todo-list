@@ -28,9 +28,9 @@ body{
 }
 #clear{
     width:5em;
-    border: 0.25vw solid gray;
-    background-color: white;
-    color: gray;
+    border: 0.25vw solid black;
+    background-color: transparent;
+    color: black;
     opacity: 10%;
     border-radius: 2vw;
     transition: 0.5s ease;
@@ -49,18 +49,18 @@ body{
     width:4vw;
     height: 4vw;
     text-align: center;
-    border: 0.25vw solid gray;
+    border: 0.25vw solid black;
     border-radius: 50%;
     position:relative;
     top:50%;
     left: 0%;
     transform: translateY(-50%);
     transition: 0.5s ease;
-    background-color: white;
+    background-color: transparent;
     opacity: 10%;
 }
 .plus{
-    border: 0.25vw solid gray; 
+    border: 0.25vw solid black; 
     transition:0.5s ease;
     position:absolute;
     left:50%;
@@ -89,7 +89,7 @@ body{
     transition: 0.5s ease;
 }
 #colorinput::-webkit-color-swatch, #bgcolorpicker::-webkit-color-swatch{
-    border: 0.25vw solid gray;
+    border: 0.25vw solid black;
     border-radius:50%;
     -webkit-transition: 0.5s ease;
 }
@@ -112,7 +112,7 @@ body{
     opacity:50%;
 }
 #stuff:hover > #newtask, #colorinput:focus ~ #newtask{
-    opacity: 40%;
+    opacity: 20%;
     top:50%;
     left:-45%;
 }
@@ -124,11 +124,11 @@ body{
     pointer-events: auto;
 }
 #stuff:hover > #colorinput, #stuff #colorinput:focus{
-    opacity: 100%;
-    left: 92%
+    opacity: 20%;
+    left: 92%;
 }
-#newtask:hover, #newtask:hover > .plus, #colorinput::-webkit-color-swatch:hover{
-    border-color:black;
+#stuff #newtask:hover, #newtask:hover > .plus, #stuff #colorinput:hover{
+    opacity: 100%;
 }
 #bgcolorpicker::-webkit-color-swatch:hover, #bgcolorpicker:hover{
     border-width:0.25vw;
