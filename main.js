@@ -41,12 +41,16 @@ document.addEventListener("keydown", function(event){
             stuff.addEventListener("mouseout", function(){colorinput.removeAttribute("style")}, {once:true})
             break;
         case "Backspace":
+            if(document.activeElement == inputtask){
+                return;
+            }
             document.getElementById("tasks").removeChild(document.getElementById("tasks").lastChild);
             let data = JSON.parse("[" + localStorage.getItem("data") + "]")
             let toChange = data.findIndex((obj) => obj != null && obj["title"] == document.getElementById("tasks").lastChild.innerHTML)
             data.pop(toChange);
             data = JSON.stringify(data).slice(1,-1)
             localStorage.setItem("data",data);
+            break;
 
     }
 })

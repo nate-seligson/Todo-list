@@ -93,6 +93,10 @@ body{
     border-radius:50%;
     -webkit-transition: 0.5s ease;
 }
+#bgcolorpicker::-webkit-color-swatch{
+    border-width: 0;
+    border-color:black;
+}
 #inputtask{
     width:0vw;
     height:5vw;
@@ -125,6 +129,9 @@ body{
 }
 #newtask:hover, #newtask:hover > .plus, #colorinput::-webkit-color-swatch:hover{
     border-color:black;
+}
+#bgcolorpicker::-webkit-color-swatch:hover, #bgcolorpicker:hover{
+    border-width:0.25vw;
 }
 #stuff:hover, #stuff:has(#colorinput:focus), #stuff:has(#inputtask:focus){
     width:80vw;
