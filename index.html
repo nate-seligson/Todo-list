@@ -3,16 +3,16 @@
 <script type = "module" src = "main.js"></script>
 <input type = "color", value = "#ffffff", id = "bgcolorpicker" oninput = "document.body.style.transition = '0.5s ease';document.body.style.backgroundColor = this.value; localStorage.setItem('bg', this.value)"></input>
 <div id = "tasks"></div>
-<div id = "stuff" style = "position:relative">
-    <input type = "color", id = "colorinput", value = "#ff0000"></input>
-    <div id = "newtask">
+<div id = "new-task-wrapper" style = "position:relative">
+    <input type = "color", id = "task-color-input", value = "#ff0000"></input>
+    <div id = "new-task-button">
         <div class = "plus" style = "width:0%; height:50%;"></div>
         <div class = "plus" style = "width:50%; height:0%;"></div>
     </div>
-    <input id = "inputtask"></input>
+    <input id = "task-text-input"></input>
 </div>
 <br>
 <center>
-<button id = "clear", onclick = "localStorage.clear(); localStorage.setItem('bg', '#ffffff');location.reload();">Clear</button>
+<button id = "clear-button", onclick = "localStorage.clear(); localStorage.setItem('bg', '#ffffff');location.reload();">Clear</button>
 </center>
 </body>

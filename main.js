@@ -1,8 +1,8 @@
 import { Task } from "./tasks.js";
-const inputtask = document.getElementById("inputtask");
-const newtask = document.getElementById("newtask");
-const colorinput = document.getElementById("colorinput");
-const stuff = document.getElementById("stuff");
+const inputtask = document.getElementById("task-text-input");
+const newtask = document.getElementById("new-task-button");
+const colorinput = document.getElementById("task-color-input");
+const stuff = document.getElementById("new-task-wrapper");
 
 //get local data
 JSON.parse("[" + localStorage.getItem("data") + "]").forEach(function(item){if(item!=null){new Task(item["title"], item["color"], item["checked"])}})
