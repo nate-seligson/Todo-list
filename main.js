@@ -35,7 +35,7 @@ document.addEventListener("keydown", function(event){
             }
             break;
         case "ArrowRight":
-            colorinput.style.left = "93%";
+            colorinput.style.left = "92%";
             colorinput.style.opacity = "100%";
             colorinput.value = "#" + Math.floor(Math.random()*16777215).toString(16);
             stuff.addEventListener("mouseout", function(){colorinput.removeAttribute("style")}, {once:true})
