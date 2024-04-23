@@ -1,6 +1,7 @@
 <body>
 <link rel = "stylesheet", href = "main.css">
 <script type = "module" src = "main.js"></script>
+<input type = "color", value = "#ffffff", id = "bgcolorpicker" oninput = "document.body.style.transition = '0.5s ease';document.body.style.backgroundColor = this.value; localStorage.setItem('bg', this.value)"></input>
 <div id = "tasks"></div>
 <div id = "stuff" style = "position:relative">
     <input type = "color", id = "colorinput", value = "#ff0000"></input>

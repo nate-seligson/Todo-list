@@ -6,6 +6,8 @@ const stuff = document.getElementById("stuff");
 
 //get local data
 JSON.parse("[" + localStorage.getItem("data") + "]").forEach(function(item){if(item!=null){new Task(item["title"], item["color"], item["checked"])}})
+document.body.style.backgroundColor = localStorage.getItem("bg");
+document.getElementById("bgcolorpicker").value = localStorage.getItem("bg");
 function CreateTask(input = "", color = "red"){
     new Task(input, color)
     localStorage.setItem("data", localStorage.getItem("data") + "," +JSON.stringify({"title": input, "color": color, "checked": false}))
@@ -38,5 +40,13 @@ document.addEventListener("keydown", function(event){
             colorinput.value = "#" + Math.floor(Math.random()*16777215).toString(16);
             stuff.addEventListener("mouseout", function(){colorinput.removeAttribute("style")}, {once:true})
             break;
+        case "Backspace":
+            document.getElementById("tasks").removeChild(document.getElementById("tasks").lastChild);
+            let data = JSON.parse("[" + localStorage.getItem("data") + "]")
+            let toChange = data.findIndex((obj) => obj != null && obj["title"] == document.getElementById("tasks").lastChild.innerHTML)
+            data.pop(toChange);
+            data = JSON.stringify(data).slice(1,-1)
+            localStorage.setItem("data",data);
+
     }
 })
